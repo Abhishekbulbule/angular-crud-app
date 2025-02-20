@@ -1,0 +1,32 @@
+<div class="container-fluid text-center p-2">
+  <h2>Todo</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Completed</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      @for (todo of todoItems(); track $index) {
+      <tr>
+        <th class="" scope="row">{{ todo.id }}</th>
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.userId }}</td>
+        <td>{{ todo.completed ? "Yes" : "No" }}</td>
+        <td>
+          <button
+            class="btn btn-danger btn-sm py-0 px-2"
+            (click)="delete(todo.id)"
+            [disabled]="!todo.completed"
+          >
+            X
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

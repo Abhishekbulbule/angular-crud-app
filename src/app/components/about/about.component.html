@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <nav class="container bg-warning gap-5 p-2 d-flex justify-content-evenly">
+    <a
+      class="m-0 text-white text-decoration-none"
+      routerLink="child-a"
+      routerLinkActive="text-decoration-underline"
+      >child1</a
+    >
+
+    <a
+      class="m-0 text-white text-decoration-none"
+      routerLink="child-b"
+      routerLinkActive="text-decoration-underline"
+      >Child2</a
+    >
+  </nav>
+  <div
+    class="container-fluid d-flex justify-content-center align-items-center flex-column"
+  >
+    <p class="text-center m-2">about works!</p>
+    <router-outlet></router-outlet>
+  </div>
+</div>
